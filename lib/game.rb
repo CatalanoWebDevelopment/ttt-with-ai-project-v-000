@@ -66,4 +66,14 @@ class Game
     end
   end
 
+  def start(input)
+    if input == 0
+      Game.new(player_1 = Players::Computer.new('X'), player_2 = Players::Computer.new('O'), board = Board.new).play
+    elsif input == 1
+      Game.new(player_1 = Players::Human.new('X'), player_2 = Players::Computer.new('O'), board = Board.new).play
+    elsif input == 2
+      Game.new.play
+    end
+  end
+
 end

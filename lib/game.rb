@@ -72,7 +72,10 @@ class Game
     elsif input == "1"
       puts "Would you like to go first? Yes or No"
       player = gets.strip
-      Game.new(player_1 = Players::Human.new('X'), player_2 = Players::Computer.new('O'), board = Board.new).play
+      if player == "Yes"
+        Game.new(player_1 = Players::Human.new('X'), player_2 = Players::Computer.new('O'), board = Board.new).play
+      elsif player == "No"
+        Game.new(player_1 = Players::Computer.new('X'), player_2 = Players::Human.new('O'), board = Board.new).play
     elsif input == "2"
       Game.new.play
     end

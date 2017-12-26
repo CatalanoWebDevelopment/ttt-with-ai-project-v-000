@@ -78,6 +78,7 @@ class Game
         Game.new(player_1 = Players::Computer.new('X'), player_2 = Players::Human.new('O'), board = Board.new).play
       end
     elsif input == "2"
+      puts "Player X will always go first! Good luck."
       Game.new.play
     end
   end

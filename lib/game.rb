@@ -68,11 +68,11 @@ class Game
 
   def start(input)
     binding.pry
-    if input == 0
+    if input == "0"
       Game.new(player_1 = Players::Computer.new('X'), player_2 = Players::Computer.new('O'), board = Board.new).play
-    elsif input == 1
+    elsif input == "1"
       Game.new(player_1 = Players::Human.new('X'), player_2 = Players::Computer.new('O'), board = Board.new).play
-    elsif input == 2
+    elsif input == "2"
       Game.new.play
     end
   end

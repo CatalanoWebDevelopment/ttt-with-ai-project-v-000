@@ -5,3 +5,4 @@ puts "Welcome to Tic Tac Toe! To play, please select the amount of users (0, 1, 
 
 input = gets.strip
 Game.new.start(input)
+game.new.play

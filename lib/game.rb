@@ -67,7 +67,6 @@ class Game
   end
 
   def start(input)
-    binding.pry
     if input == "0"
       Game.new(player_1 = Players::Computer.new('X'), player_2 = Players::Computer.new('O'), board = Board.new).play
     elsif input == "1"

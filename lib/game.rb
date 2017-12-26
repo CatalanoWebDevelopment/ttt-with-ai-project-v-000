@@ -28,7 +28,8 @@ class Game
 
   def won?
     WIN_COMBINATIONS.any? do |combo|
-      if board.taken?(combo[0]) && board.cells[combo[0]] == board.cells[combo[1]] && board.cells[combo[1]] == board.cells[combo[2]]
+
+      if board.taken?(combo[0] + 1) && board.cells[combo[0]] == board.cells[combo[1]] && board.cells[combo[1]] == board.cells[combo[2]]
         return combo
       end
     end
